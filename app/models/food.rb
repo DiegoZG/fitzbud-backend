@@ -1,7 +1,7 @@
 class Food < ApplicationRecord
     validates :title, presence: true, uniqueness: { case_sensitive: false, message: "must be unique"}
 
-    validate :calories, presence: true
+    validates :calories, presence: true
     belongs_to :category
     belongs_to :user
 
